@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Work+Sans:wght@300&display=swap');
+
+* {
+	user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;  
+	outline: none;
+	font-family: 'Work Sans', sans-serif;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	font-weight: 400;
+}
+
+
+body {
+	line-height: 1;
+	font-family: 'Work Sans', sans-serif;
+  background-color: #c0c0c0;
+}
+
+ol, ul {
+	list-style: none;
+} 
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.calculatorContainer {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calculator {
+  height: 470px;
+  max-width: 355px;
+  border: 2px solid #004e98;
+  box-shadow: 0 0 15px 6px #ff6700;
+  border-radius: 0;
+  animation-name: appear;
+  animation-duration: 2s;
+}
+
+.outputContainer {
+  height: 70px;
+  max-width: 460px;
+  background-color: #c0c0c0;
+  color: #004e98;
+  text-align: right;
+  font-size: 1.5rem;
+  font-family: 'Nunito', sans-serif;
+  position: relative;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  border-radius: 0;
+}
+
+.input {
+  margin: 0 5px 0 5px;
+  font-size: 2rem;
+  font-family: 'Nunito', sans-serif;
+
+}
+.result {
+  margin: 6px;
+  color: #000;
+  position: absolute;
+  bottom:0;
+  right:0;
+  font-family: 'Nunito', sans-serif;
+  font-size: 2.3rem;
+}
+
+.keys {
+  display: grid;
+  gap: 5px;
+  padding: 10px 10px 45px 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background-color: #004e98;
+  border-radius: 0 0 0 0;
+}
+
+.keys button {
+  box-shadow: 0 0 5px 1px #FFFF;
+  background-color: #3a6ea5;
+  color: #FFFF;
+  cursor: pointer;
+} 
+
+.keys button:first-child {
+  grid-column-end: 3;
+  grid-column-start: 1;
+  background-color: #ff6700;
+  color: white;
+}
+
+.keys button:nth-child(15) {
+  background-color: #ff6700;
+  grid-row: 4 / 6;
+  grid-column: 4 / 4;
+  color: white;
+}
+
+.keys button:nth-child(16) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.keys button:hover {
+  box-shadow: 0 0 6px 2px #000;
+}
+
+.keys button:active {
+  box-shadow: 0 0 7px 3px #000;
+}
+
+button {
+  border: none;
+  font-size: 28px;
+  min-width: 80px;
+  min-height: 65px;
+  border-radius: 4px;
+}
+
+.by {
+	position: relative;
+	font-size: .7rem;
+  bottom: 5.5%;
+  text-align: center;
+	cursor: pointer;
+	text-decoration: none;
+  animation-name: appear;
+  animation-duration: 10s;
+  }
+  
+  .by a {
+	text-decoration: none;
+	color: #ff6700;
+	transition: .3s;
+  font-family: 'Nunito', sans-serif;
+  }
+  
+  .by a:hover {
+	color: white;
+  }
+
+  @keyframes appear {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
